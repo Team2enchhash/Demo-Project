@@ -667,6 +667,7 @@ span#foot-text:hover{
     width: 100%;
     outline: none;
     padding: 10px 20px;
+    border-radius: 5px;
     border: 1px solid black;
 }
 .contact-form textarea{
@@ -674,6 +675,8 @@ span#foot-text:hover{
     outline: none;
     padding: 15px 20px;
     border: 1px solid black;
+    border-radius: 5px;
+
 }
 .contact-form button{
     width: 100%;
@@ -691,6 +694,9 @@ span#foot-text:hover{
 .contact-form input:focus{
     border:2px solid var(--secondary);
 }
+.contact-form textarea:focus{
+    border:2px solid var(--secondary);
+}
 .contact-form input:invalid{
     border-color: red;
 }
@@ -703,7 +709,21 @@ span#foot-text:hover{
 /* Contact page style Ends Here.... */
 
 
+/* reveal animation  */
 
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/* reveal animation  */
 
 
 
@@ -1090,7 +1110,14 @@ footer{
 
     .contact-form input,.contact-form textarea,
     .contact-form button,.map-img{
-        width: 300px;
+        width: 320px;
+    }
+    .map-img{
+        align-self: center;
+        justify-self: center;
+    }
+    .map-img iframe{
+        height: 300px;
     }
 }
 @media screen and (max-width:320px) {
