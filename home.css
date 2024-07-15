@@ -330,7 +330,7 @@ header p{
     color: black;
     padding: 10px;
 }
-.testimonial-heading span,.product-heading span,.benefit-heading span,#contact-container span{
+.testimonial-heading span,.product-heading span,.benefit-heading span,.contact-container span{
     color: var(--secondary);
 }
 .logo-slider{
@@ -603,7 +603,7 @@ footer{
 #foot-head{
     font-size: 20px;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 40px;
 }
 span#foot-text{
     font-size: 15px;
