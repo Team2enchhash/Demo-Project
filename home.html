@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hash Insurance</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <link rel="stylesheet" href="swiper-bundle.min.css">
+        <link rel="stylesheet" href="home.css">
+    </head>
+    <body>
+        <div class="aside-overlay" onclick="closemenu()"></div>
+        <aside id="sidebar" class="expand">
+            <div class="cancel" onclick="closemenu()"><button type="button">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown"
+                        data-bs-toggle="collapse" data-bs-target="#auth"
+                        aria-expanded="false" aria-controls="auth">
+                        <i class="fa-solid fa-rectangle-list"></i>
+                        <span>Products</span>
+                    </a>
+                    <ul id="auth"
+                        class="sidebar-dropdown list-unstyled collapse"
+                        data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Health
+                                insurance</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Car insurance</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Bike insurance</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Travel
+                                insurance</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Home insurance</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown"
+                        data-bs-toggle="collapse" data-bs-target="#auth0"
+                        aria-expanded="false" aria-controls="auth">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <span>Claims</span>
+                    </a>
+                    <ul id="auth0"
+                        class="sidebar-dropdown list-unstyled collapse"
+                        data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Claim overview</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">KYC Application
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Claim status</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">intimate Claim </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown"
+                        data-bs-toggle="collapse" data-bs-target="#auth1"
+                        aria-expanded="false" aria-controls="auth">
+                        <i class="fa-solid fa-database"></i>
+                        <span>Resource</span>
+                    </a>
+                    <ul id="auth1"
+                        class="sidebar-dropdown list-unstyled collapse"
+                        data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Article</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Download </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">About</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Policy warning</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown"
+                        data-bs-toggle="collapse" data-bs-target="#auth2"
+                        aria-expanded="false" aria-controls="auth">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Support</span>
+                    </a>
+                    <ul id="auth2"
+                        class="sidebar-dropdown list-unstyled collapse"
+                        data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Contact us</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Download policy PDF
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Career</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Branch Details </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-item">
+                    <a href="#About" class="sidebar-link">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#About" class="sidebar-link">
+                        <i class="fa-solid fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <nav>
+            <div class="menu-toggle" onclick="openmenu()"><i
+                class="fa-solid fa-bars"></i></div>
+            <div class="logo-name"><h3>Hash Insurence</h3></div>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <button data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init
+                        class="btn dropdown-toggle nav-item"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false">
+                        Products
+                    </button>
+                    <ul class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Car
+                                Insurence</a></li>
+                        <li><a class="dropdown-item" href="#">Bike
+                                Insurence</a></li>
+                        <li><a class="dropdown-item" href="#">Home Insurence
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">Health Insurence
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">travel Insurence
+                            </a></li>
+                    </ul>
+
+                </div>
+                <div class="dropdown">
+                    <button data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init
+                        class="btn dropdown-toggle nav-item"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false">
+                        Claims
+                    </button>
+                    <ul class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Claim
+                                Overview</a></li>
+                        <li><a class="dropdown-item" href="#">KYC
+                                Application</a></li>
+                        <li><a class="dropdown-item" href="#">Claim
+                                status</a></li>
+                        <li><a class="dropdown-item" href="#">Intimate
+                                Claim</a></li>
+
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init
+                        class="btn dropdown-toggle nav-item"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false">
+                        Resources
+                    </button>
+                    <ul class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Articles</a></li>
+                        <li><a class="dropdown-item" href="#">Downloads</a></li>
+                        <li><a class="dropdown-item" href="#">About us </a></li>
+                        <li><a class="dropdown-item" href="#">Policy Warnings
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button data-mdb-button-init
+                        data-mdb-ripple-init data-mdb-dropdown-init
+                        class="btn dropdown-toggle nav-item"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false">
+                        Support
+                    </button>
+                    <ul class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Contact
+                                us</a></li>
+                        <li><a class="dropdown-item" href="#">Download Policy
+                                PDF</a></li>
+                        <li><a class="dropdown-item" href="#">Branch Details
+                            </a></li>
+                        <li><a class="dropdown-item" href="#">Careers </a></li>
+                    </ul>
+                </div>
+                <div class="login-signup">
+                    <button class="login button">Login/Signup&nbsp;<i
+                            class="fa-solid fa-right-to-bracket"></i></button>
+             
+                </div>
+            </div>
+            
+        </nav>
+        <header>
+            <div class="header-content">
+                <h1>Hash Insurence Protects Your Family</h1>
+                <p>Hash Insurence provides customized insurance plans to protect
+                    your home, vehicle, health and more. With over a decade of
+                    experience and thousands of satisfied customers, you can
+                    trust
+                    us to take care of your insurance needs.</p>
+                <button class="button">Start Here&nbsp;<i
+                        class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+            </div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade"
+                data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="images/header_bg1.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="images/header_bg2.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="images/header_bg3.jpg" class="d-block w-100"
+                            alt="...">
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+        <div class="product-heading">
+            <h1 class="title ">Find the right <span>Insurance</span></h1>
+            <p class="sub-title">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Error tenetur quisquam, repellat reiciendis
+                provident magni vel labore saepe voluptas veritatis natus sed
+                numquam molestias tempore omnis similique facilis! Provident,
+                commodi?</p>
+        </div>
+        <div class="products">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/service/home-i.png" alt>
+                </div>
+                <div class="product-content">
+                    <div class="product-name"><a href="#">Home Insurence &nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/service/car-i.jpg" alt>
+                </div>
+                <div class="product-content">
+                    <div class="product-name"><a href="#">Car Insurence &nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/service/bike-i.jpg" alt>
+                </div>
+                <div class="product-content">
+                    <div class="product-name"><a href="#">Bike Insurence &nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/service/health-i.jpg" alt>
+                </div>
+                <div class="product-content">
+                    <div class="product-name"><a href="#">Health Insurence &nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/service/accident-i.jpg" alt>
+                </div>
+                <div class="product-content">
+                    <div class="product-name"><a href="#">Accident Insurence
+                            &nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/service/travel-i.jpg" alt>
+                </div>
+                <div class="product-content">
+                    <div class="product-name"><a href="#">Travel Insurence &nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/service/life-i.jpg" alt>
+                </div>
+                <div class="product-content">
+                    <div class="product-name"><a href="#">Life Insurence &nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="images/service/auto-i.jpg" alt>
+                </div>
+                <div class="product-content">
+                    <div class="product-name"><a href="#">Auto Insurence &nbsp;<i
+                                class="fa-solid fa-arrow-right"></i></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-heading">
+            <h1 class="benefit-title">Take the worry out of life with
+                <br><span>insurance protection</span></h1>
+        </div>
+        <div class="benefits-container">
+
+            <div class="benefit">
+                <div class="benefit-img"><i
+                        class="fa-solid fa-hand-peace"></i></div>
+                <p class="benefit-name">PEACE OF MIND</p>
+                <p class="benefit-description">Insurance Company has been serve policyholde protecting businesses, mitigating.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-img"><i
+                        class="fa-solid fa-heart-pulse"></i></div>
+                <p class="benefit-name">SET FOR LIFE</p>
+                <p class="benefit-description">Customer told us the things they dislike most insurance. We listened and created.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit-img"><i
+                        class="fa-solid fa-sack-dollar"></i></div>
+                <p class="benefit-name">TAILORED COVER</p>
+                <p class="benefit-description">We guarantee at your next renewal, you'll get the same or an even better price.</p>
+            </div>
+        </div>
+        <div class="product-heading">
+            <h1 class="title ">Business <span>Partners</span></h1>
+        </div>
+        <div class="logo-slider">
+            <!-- Logo Carousel animation -->
+            <div
+                x-data="{}"
+                x-init="$nextTick(() => {
+                            let ul = $refs.logos;
+                            ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                            ul.nextSibling.setAttribute('aria-hidden', 'true');
+                        })"
+                class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                <ul x-ref="logos"
+                    class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                    <li>
+                        <img src="images/logo/google-ar21.svg" alt />
+                    </li>
+                    <li>
+                        <img src="images/logo/github-ar21.svg" alt />
+                    </li>
+                    <li>
+                        <img src="images/logo/facebook-ar21.svg" alt />
+                    </li>
+                    <li>
+                        <img src="images/logo/ionicframework-ar21.svg" alt />
+                    </li>
+                    <li>
+                        <img src="images/logo/puppet-ar21.svg" alt />
+                    </li>
+                    <li>
+                        <img src="images/logo/quora-ar21.svg" alt />
+                    </li>
+                    <li>
+                        <img src="images/logo/twitter-ar21.svg" alt />
+                    </li>
+                    <li>
+                        <img src="images/logo/upi-ar21.svg" alt />
+                    </li>
+
+                </ul>
+            </div>
+            <!-- End: Logo Carousel animation -->
+        </div>
+        <div class="counter-container" id="counter-section">
+
+            <div class="counter-box">
+                <div class="counter">
+                    <p class="count" data-target="155">0</p>
+                    <span class="sub-count">&nbsp;+Crores</span>
+                </div>
+                <p class="counter-name">Customers Insured</p>
+            </div>
+
+            <div class="counter-box">
+                <div class="counter">
+                    <p class="count" data-target="155">0</p>
+                    <span class="sub-count">&nbsp;+Crores</span>
+                </div>
+                <p class="counter-name">Policies Issued </p>
+            </div>
+
+            <div class="counter-box">
+                <div class="counter">
+                    <p><span class="count" data-target="90.02">0 </span>%</p>
+                    <span class="sub-count">&nbsp;Percentage</span>
+                </div>
+                <p class="counter-name">Claim Settlement Rtaio </p>
+            </div>
+
+            <div class="counter-box">
+                <div class="counter">
+                    <p class="count" data-target="120">0</p>
+                    <span class="sub-count">&nbsp;Minutes</span>
+                </div>
+                <p class="counter-name">Fastest Claim Settled </p>
+            </div>
+        </div>
+        <div class="testimonial-heading">
+            <h1 class="title">Happy <span>Customers</span></h1>
+            <p class="sub-title">Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Error tenetur quisquam, repellat reiciendis
+                provident magni vel labore saepe voluptas veritatis natus sed
+                numquam molestias tempore omnis similique facilis! Provident,
+                commodi?</p>
+        </div>
+        <div class="testimonial">
+            <div class="slide-container ">
+                <div class="slide-content swiper mySwiper">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=260" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Jhony</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Anny</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Dravid</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Michael</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Danny</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Jhonwick</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">TomCruse</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">windiesal</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt
+                                        class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">Paul walker</h2>
+                                <p class="description">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Error
+                                    quo impedit repellendus iusto sapiente, esse
+                                    blanditiis velit numquam similique
+                                    adipisci?</p>
+                                <div class="review">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div id="contact-container">
+        <h1 class="title ">CONTACT <span>US</span></h1>
+        <div class="contact-section">
+            <div class="contact-form">
+                <input type="text" placeholder="Enter Your Name" name="name" id="name" autocomplete="off">
+                <input type="email" placeholder="Enter Your Email" name="email" id="email" autocomplete="off">
+                <input type="text" placeholder="Phone Number" name="phone" id="phone" autocomplete="off">
+                <input type="text" placeholder="Enter Your Email Subject" name="Subject" id="subject" autocomplete="off">
+                <textarea name="" id="" placeholder="Write Your message here..." name="message" id="message" autocomplete="off"></textarea>
+                <button type="submit" name="submit" id="submit">SUBMIT</button>
+            </div>
+            <div class="map-img">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125042.34613383227!2d78.05572326321786!3d11.653723328516314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ccf52cba0b%3A0xee9989007068ca47!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1721032517226!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        </div>
+        
+        <footer>
+            <div class="get-in-touch">
+                <p id="foot-head">GET IN TOUCH</p>
+                <p id="foot-text">We are here to listen</p>
+                <div id="foot-con">
+                    <div id="foot-pic"><i
+                            class="fa-solid fa-location-dot"></i></div>
+                    <div class="foot-con-text">420,cross street, <br>Ammapet
+                        <br>Salem-645 654</div>
+                </div>
+                <div id="foot-con">
+                    <div id="foot-pic"><i class="fa-solid fa-phone"></i></div>
+                    <div class="foot-con-text">(+91) 98980 45345</div>
+                </div>
+                <div id="foot-con">
+                    <div id="foot-pic"><i class="fa-solid fa-clock"></i></div>
+                    <div class="foot-con-text">9.00 am - 8.00 pm IST <br>Monday
+                        to Friday</div>
+                </div>
+            </div>
+            <div class="footer-box">
+                <span id="foot-head">OUR COMPANY</span> <br>
+                <span id="foot-text">Our story</span><br>
+                <span id="foot-text">NEws & Blog</span><br>
+                <span id="foot-text">Careers</span><br>
+                <span id="foot-text">Customer Support</span><br>
+                <span id="foot-text">Contact us</span><br>
+                <span id="foot-text">Website Accessibility</span>
+            </div>
+            <div class="footer-box">
+                <span id="foot-head">CORPORATE INFO</span><br>
+                <span id="foot-text">Auto insurance</span><br>
+                <span id="foot-text">Home insurance</span><br>
+                <span id="foot-text">Claims</span><br>
+                <span id="foot-text">Agent Locator</span><br>
+                <span id="foot-text">Express Access</span><br>
+                <span id="foot-text">Life insurance</span><br>
+                <span id="foot-text">Money back policy</span><br>
+            </div>
+            <div class="footer-box">
+                <span id="foot-head">INSURANCE INFO</span><br>
+                <span id="foot-text">Auto insurance</span><br>
+                <span id="foot-text">Home insurance</span><br>
+                <span id="foot-text">Health insurance</span><br>
+                <span id="foot-text">Accident insurance</span><br>
+                <span id="foot-text">Travel insurance</span><br>
+                <span id="foot-text">Vehicle insurance</span>
+            </div>
+        </footer>
+        <div id="copy">
+            <p>@copyright 2024. All rights reserved by Hash Insurance </p>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-solid fa-paper-plane"></i>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- Script Files -->
+        <script src="home.js"></script>
+        <script src="swiper-bundle.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+        </script>
+        <script>
+      var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      centeredSlides: false,
+      loop:true,
+      fade:true,
+      slidesPerGroupSkip: 1,
+      grabCursor: true,
+      spaceBetween:30,
+      keyboard: {
+        enabled: true,
+      },
+      breakpoints: {
+        0:{
+            slidesPerView: 1,
+            slidesPerGroup:1,
+        },
+        520: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+        },
+        950: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        }
+
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        dynamicBullets:true,
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+        </script>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }                    
+                },
+            },
+        };
+        </script>
+    </body>
+</html>

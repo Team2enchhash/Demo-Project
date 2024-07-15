@@ -1,0 +1,1144 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --primary:#14213d;
+    --secondary:#fca311;
+    --black:#000000;
+    --white:#ffffff;
+    --grey:#e5e5e5;
+}
+/* Side bar Style Starts */
+.menu-toggle{
+    display: none;
+}
+aside {
+    padding: 20px 0px;
+    z-index: 1000;
+    display: flex;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+}
+.aside-overlay{
+    z-index: 999;
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: none;
+}
+
+#sidebar li a {
+    text-decoration: none;
+}
+
+#sidebar li {
+    list-style: none;
+}
+
+#sidebar h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar .cancel {
+    cursor: pointer;
+    padding-left: 80%;
+}
+
+.cancel button {
+    all: unset;
+    color: white;
+    font-size: 25px;
+    background-color: transparent;
+}
+
+#sidebar.expand {
+    width: 300px;
+    min-width: 300px;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-item {
+    position: relative;
+    visibility: visible;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+}
+
+/* Sidebar Style Ends  */
+
+/* Dropdown External css */
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-menu{
+    background-color: var(--white);
+    border-top: 3px solid var(--secondary);
+}
+.dropdown>.dropdown-toggle:active {
+      pointer-events: none;
+}
+.dropdown-item:hover{
+    border-left: 3px solid var(--secondary);
+}
+/* Dropdown External css */
+
+/* Navbar style starts here............... */
+
+.menu-toggle{
+    color: white;
+    font-size: 30px;
+}
+
+.logo-name h3{
+    color: var(--white);
+    font-size: 35px;
+    padding-top: 10px;
+    font-family: "Pacifico", cursive;
+}
+
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: var(--primary);
+    color: var(white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 99;
+    box-shadow: 0px 0px 10px black;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+nav .nav-item{
+    display: inline;
+    color: var(--white);
+    font-size: 16px;
+    /* pointer-events: none; */
+} 
+.nav-item:hover{
+    color: var(--secondary);
+}
+.button{
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #ff9d00;
+    text-align: center;
+    font-weight: 500;
+    color: var(--white);
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(-45deg,transparent,transparent,transparent,white,transparent,white,white,transparent,transparent);
+    
+}
+@keyframes glassy {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    }
+    
+}
+.button:hover{
+    background-color: rgb(6, 160, 6);
+
+}
+.button:hover::before{
+    animation:glassy 0.2s linear;
+    animation-delay: 0.3s;
+}
+.login-signup{
+    padding: 20px;
+}
+/* Navbar style Ends here............... */
+
+/* Header style Starts here.............. */
+
+header{
+    margin-top: 70px;
+    width: 100%;
+    height: 90vh;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+
+}
+#carouselExampleFade{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+
+header::before{
+    z-index: 3;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,rgb(1, 1, 65),transparent);
+    opacity: 70%;
+}
+.header-content{
+    z-index:10;
+    width: 700px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    z-index: 4;
+}
+.header-content button{
+    width: 200px;
+}
+header > h1,p,button{
+    z-index: 2;
+}
+
+header h1{
+    color: var(--white);
+    font-size: 50px;
+}
+header p{
+    color: var(--white);
+    font-size: 20px;
+    
+}
+/* Header style Ends here.............. */
+
+.title{
+    padding-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+.sub-title{
+    padding: 5px 150px;
+    font-size: 16px;
+    text-align: center;
+}
+.testimonial-heading{
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+}
+.benefit-heading{
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 0px;
+    padding-top: 50px;
+
+}
+.benefit-title{
+    font-size: 40px;
+    text-align: center;
+}
+.product-heading{
+    background-color: var(--white);
+    color: black;
+    padding: 10px;
+}
+.testimonial-heading span,.product-heading span,.benefit-heading span,#contact-container span{
+    color: var(--secondary);
+}
+.logo-slider{
+    padding: 50px 50px;
+}
+
+/* Products style starts here............ */
+
+.products{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.product-card{
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    color: white;
+    border: 2px solid var(--secondary);
+
+}
+/* .product-card:hover{
+    border: 2px solid var(--secondary);
+} */
+.product-img{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-img img{
+    width: 170px;
+    height: 100%;
+}
+.product-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:10px;
+    gap: 10px;
+}
+.product-name a{
+    text-decoration: none;
+    color: var(--primary);
+
+}
+.product-name{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Products style ends here............ */
+
+/* Testimonial Section Style Starts here */
+
+.testimonial{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+}
+.slide-container{
+    position: relative;
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 60px;
+}
+.slide-content{
+    padding:20px 25px;
+}
+.swiper-pagination{
+    color: white;
+}
+
+.card{
+    border-radius: 25px;
+    background-color: var(--white);
+    
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px ;
+
+}
+.image-content{
+    row-gap: 5px;
+    position: relative;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fca311;
+    border-radius: 25px 25px 0px 25px;
+   
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #fca311;
+}
+.overlay::after{
+    border-radius: 0px 25px 0px 0px;
+    background-color: white;
+}
+
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--secondary);
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+}
+.description{
+    font-size: 14px;
+    color: rgb(70, 70, 70);
+    text-align: center;
+}
+.review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    color: gold;
+    padding: 20px;
+   
+}
+.swiper-pagination-bullet{
+    background-color: var(--secondary);
+}
+.swiper-button-next,.swiper-button-prev{
+    color: var(--secondary);
+}
+/* Testimonial Section Style Ends here */
+
+/* Counter Section Style Starts here.... */
+
+.counter-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    gap: 80px;
+    padding-bottom: 50px;
+}
+.counter-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 5px;
+    border-bottom: 5px solid var(--secondary);
+}
+
+.counter{
+    text-align: center;
+}
+.counter-name{
+    font-size: 20px;
+}
+.count{
+    font-size: 50px;
+    line-height: 70px;
+}
+.sub-count{
+    font-size: 25px;
+}
+
+/* Counter Section Style Ends here.... */
+
+/* benefit container style starts here..... */
+
+.benefits-container{
+    background-color: var(--primary);
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.benefit{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding: 10px;
+    border: 1px dashed grey;
+    width: 280px;
+    gap: 8px;
+}
+.benefit-name{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+.benefit-description{
+    color: white;
+    text-align: center;
+}
+.benefit-img{
+    padding: 8px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: var(--secondary);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+/* benefit container style Endss here..... */
+
+/* Footer Style Starts Here..... */
+footer{
+    display: grid;
+    justify-items: space-evenly;
+    align-content: start;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 40px 60px;
+    gap: 50px;
+    background-color: var(--primary);
+    color: var(--white);
+}
+#foot-head{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+span#foot-text{
+    font-size: 15px;
+    line-height: 35px;
+}
+span#foot-text:hover{
+    color: rgb(13, 160, 218);
+    text-decoration: underline;
+}
+#foot-pic{
+    padding: 10px;
+}
+#foot-con{
+    justify-self: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 5px 0px;
+}
+#copy{
+    border-top: 0.5px solid var(--secondary);
+    padding: 15px 10px ;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    color: white;
+    row-gap: 10px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+/* Footer Style Ends Here..... */
+/* Contact page style starts Here.... */
+
+.contact-section{
+    padding: 10px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-form{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    padding:  20px;
+    gap: 20px;
+}
+.contact-form input{
+    width: 100%;
+    outline: none;
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+.contact-form textarea{
+    width: 100%;
+    outline: none;
+    padding: 15px 20px;
+    border: 1px solid black;
+}
+.contact-form button{
+    width: 100%;
+    outline: none;
+    padding: 15px 20px;
+    border: none;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 45px;
+    transition: all 0.3s ease;
+}
+.contact-form button:hover{
+    background-color: rgb(16, 209, 16);
+}
+.contact-form input:focus{
+    border:2px solid var(--secondary);
+}
+.contact-form input:invalid{
+    border-color: red;
+}
+.map-img{
+    padding: 20px;
+}
+.map-img iframe{
+    border-radius: 15px;
+}
+/* Contact page style Ends Here.... */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px){
+    .carousel-item img{
+        width: auto;
+        object-fit: cover;
+        height: 90vh;
+    }
+    
+    #carouselExampleFade{
+        width: auto;
+        height: 90h;
+    }
+    .carousel-inner{
+        height: 100%;
+        width:auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+.menu-toggle{
+    display: inline-block;
+}
+nav{
+    justify-content: start;
+    gap: 20px;
+}
+.nav-links{
+    display: none;
+}
+.logo-name h3{
+    font-size: 30px;
+}
+header::before{
+    background: linear-gradient(to right,rgb(1, 1, 65),rgb(1, 1, 65));
+    opacity: 60%;
+}
+.carousel-item img{
+    width: auto;
+    object-fit: cover;
+    height: 90vh;
+}
+
+#carouselExampleFade{
+    width: auto;
+    height: 90h;
+}
+.carousel-inner{
+    height: 100%;
+    width:auto;
+}
+header{
+    height: 90vh;
+}
+.header-content{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* Header style Ends here.............. */
+
+.title{
+    font-size: 50px;
+}
+.sub-title{
+    padding: 5px 40px;
+    font-size: 15px;
+}
+.testimonial-heading{
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+}
+.benefit-heading{
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 0px;
+}
+.benefit-title{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+}
+.product-heading{
+    background-color: var(--white);
+    color: black;
+    padding: 10px;
+}
+.logo-slider{
+    padding:  50px 10px ;
+}
+
+.products{
+    gap: 40px;
+}
+.product-img{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-img img{
+    width: 170px;
+    height: 100%;
+}
+
+.swiper-button-next,.swiper-button-prev{
+    color: var(--secondary);
+}
+.counter-container{
+    padding-bottom: 50px;
+}
+.counter-box{
+    width: 250px;
+}
+.counter-name{
+    font-size: 20px;
+}
+.count{
+    font-size: 50px;
+    line-height: 70px;
+}
+.sub-count{
+    font-size: 25px;
+}
+
+.benefits-container{
+    gap: 50px;
+}
+.benefit{
+    padding: 10px;
+    width: 320px;
+}
+.benefit-name{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+.benefit-description{
+    font-size: 16px;
+}
+footer{
+    justify-items: center;
+    align-content: start;
+    grid-template-columns: 1fr 1fr ;
+    padding: 40px 60px;    
+}
+#copy{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-section{
+    padding: 10px 60px;
+    grid-template-columns: 1fr ;
+}
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:425px) {
+
+    /* Header style Starts here.............. */
+
+    .header-content{
+        width: 100%;
+        padding: 10px;
+    
+    }
+    header h1{
+        font-size: 30px;
+    }
+    header p{
+        font-size: 16px;
+        
+    }
+    .logo-name h3{
+        font-size: 25px;
+    }
+    .carousel-item{
+        transform: translateX(-65%);        
+    }
+    /* Header style Ends here.............. */
+    
+    .title{
+        font-size: 30px;
+        padding: 30px 5px;
+    }
+    .sub-title{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .testimonial-heading{
+        background-color: var(--primary);
+        color: white;
+        padding: 20px 5px;
+    }
+    .benefit-heading{
+        background-color: var(--primary);
+        color: white;
+        padding: 20px 0px;
+    }
+    .benefit-title{
+        font-size: 24px;
+        text-align: center;
+        background-color: var(--primary);
+        margin: 0;
+
+    }
+    .benefits-container{
+        padding: 30px 10px;
+    }
+    .product-heading{
+        background-color: var(--white);
+        color: black;
+        padding: 10px;
+    }
+    .products{
+        gap: 10px;
+    }
+    .product-img{
+        width: 100%;
+        height: 80px;
+    }
+    .product-img img{
+        width: 100px;
+        height: 100%;
+    }
+    .product-card{
+        text-align: center;
+        width: 150px;
+        padding: 5px;
+    }
+    .product-card a{
+        font-size: 18px;
+    }
+    
+    .logo-slider{
+        padding: 30px 0px ;
+    }
+    .logo-slider img{
+        height: 50px;
+        width: auto;
+    }
+    .counter-container{
+        justify-content: space-around;
+        padding: 15px;
+        padding-bottom: 50px;
+        gap: 25px;
+        align-items: end;
+    }
+    .counter-box{
+        width: 150px;
+    }
+    .counter-name{
+        font-size: 10px;
+    }
+    .count{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .sub-count{
+        font-size: 20px;
+    }
+    
+    .swiper-button-next,.swiper-button-prev{
+        color: var(--secondary);
+        display: none;
+    }
+    .slide-container{
+        padding: 30px 10px;
+    }
+    footer{
+        justify-items: center;
+        align-content: start;
+        grid-template-columns: 1fr ;
+        padding: 20px 60px;    
+    }
+    .get-in-touch{
+        text-align: center;
+    }
+    .footer-box{
+        text-align: center;
+    }
+    .contact-section{
+        padding: 10px;
+    }
+    .contact-form{
+        padding:  10px;
+        gap: 15px;
+    }
+    .contact-form input{
+        width: 350px;
+        outline: none;
+        padding: 5px 10px;
+        border: 0.5px solid black;
+    }
+    .contact-form textarea{
+        width: 350px;
+        padding:5px 10px;
+    }
+    .contact-form button{
+        width: 350px;
+        outline: none;
+        padding: 10px 20px;
+       
+        border-radius: 45px;
+        transition: all 0.3s ease;
+    }
+    .map-img iframe{
+        width: 100%;
+        align-content: center;
+    }
+    .map-img{
+        width: 400px;
+        padding: 10px;
+        align-self: center;
+    }
+    #copy{
+        text-align: center;
+    }
+    }
+
+@media screen and (max-width:375px) {
+
+    .contact-form input,.contact-form textarea,
+    .contact-form button,.map-img{
+        width: 300px;
+    }
+}
+@media screen and (max-width:320px) {
+
+    .benefits-container{
+        padding: 10px;
+    }
+    .products{
+        gap: 5px;
+        padding: 5px;
+    }
+    .product-img{
+        width: 100%;
+        height: 70px;
+    }
+    .product-img img{
+        width: 100px;
+        height: 100%;
+    }
+    .swiper-button-next,.swiper-button-prev{
+        color: var(--secondary);
+        display: none;
+    }
+    .slide-container{
+        padding: 30px 10px;
+    }
+    footer{
+        justify-items: center;
+        align-content: start;
+        grid-template-columns: 1fr ;
+        padding: 20px 60px;    
+    }
+    .get-in-touch{
+        text-align: center;
+    }
+    .footer-box{
+        text-align: center;
+    }
+    .benefits-container{
+    padding: 10px;
+    }
+    .benefit{
+    padding: 10px;  
+    width: 250px; 
+    }
+    .benefit-description{
+    font-size: 14px;
+}
+
+
+}
