@@ -1,0 +1,476 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --navy: #14213D;
+    --orange: #FCA311;
+    --grey: #E5E5E5;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--navy) !important;
+}
+  
+.container {
+  max-width: 600px !important; 
+  margin: 0 auto;
+  background-color: var(--navy); 
+  color: #fff; 
+  padding: 20px !important;
+  margin-top: 50px !important;
+  border-radius: 8px;
+/* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; */
+margin-bottom: 100px ;
+}
+  
+h2 {
+  text-align: center;
+  margin-bottom: 20px !important;
+  color: #fff; 
+  font-style: italic;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 20px !important;
+  color: coral !important;
+  font-style: italic;
+}
+  
+form .step {
+  display: none; 
+}
+  
+form .step.active {
+  display: block;
+}
+  
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff; 
+  margin-left: 10%;
+  font-style: italic;
+}
+  
+input[type="text"],
+input[type="email"],
+select {
+  width: 80% !important;
+  padding: 10px !important;
+  margin-bottom: 15px !important;
+  margin-left: 10% !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  font-size: 16px !important;
+  box-sizing: border-box !important;
+  background-color: #fff !important;
+  color: #333; 
+}
+  
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: none !important;
+  border-color: var(--white) !important;
+}
+  
+.form-btn {
+  background-color: var(--orange);
+  color: white;
+  border: none !important;
+  padding: 8px 20px !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px !important;
+  border-radius: 4px !important;
+  cursor: pointer;
+  transition: background-color 0.3s !important;
+  margin-top: 10px !important;
+  margin-left: 20% !important;
+  width: 60% !important;
+  border: 2px solid var(--orange) !important;
+}
+  
+button:hover {
+  border: 2px solid var(--orange) !important;
+  background-color: transparent !important;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: black;
+}
+
+/* Nav Bar */
+
+:root{
+    --primary:#14213d;
+    --secondary:#fca311;
+    --black:#000000;
+    --white:#ffffff;
+    --grey:#e5e5e5;
+}
+    /* Side bar Style Starts */
+.menu-toggle{
+    display: none;
+    color: white;
+}
+aside {
+    padding: 20px 0px;
+    z-index: 1000;
+    display: flex;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+}
+
+#sidebar li a {
+    text-decoration: none;
+}
+
+#sidebar li {
+    list-style: none;
+}
+
+#sidebar h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.login a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+#sidebar .cancel {
+    cursor: pointer;
+    padding-left: 80%;
+}
+
+.cancel button {
+    all: unset;
+    color: white;
+    font-size: 25px;
+    background-color: transparent;
+}
+
+#sidebar.expand {
+    width: 300px;
+    min-width: 300px;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-item {
+    position: relative;
+    visibility: visible;
+}
+
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+}
+
+/* Sidebar Style Ends  */
+
+/* Dropdown External css */
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-menu{
+    background-color: var(--white);
+    border-top: 3px solid var(--secondary);
+}
+.dropdown>.dropdown-toggle:active {
+      pointer-events: none;
+}
+.dropdown-item:hover{
+    border-left: 3px solid var(--orange);
+}
+.dropdown-toggle:hover{
+    color: var(--white);
+}
+/* Dropdown External css */
+
+/* Navbar style starts here............... */
+
+.menu-toggle{
+    color: white;
+    font-size: 30px;
+}
+
+.logo-name{
+    color: var(--white);
+    font-size: 35px;
+    padding-top: 10px;
+    font-family: "pacifico", poppins;
+}
+.logo-name a {
+    text-decoration: none;
+    font-family: "pacifico", cursive;
+    color: var(--white);
+    cursor: pointer;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: var(--primary);
+    color: var(white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 99;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+nav .nav-item{
+    display: inline;
+    color: var(--white);
+    font-size: 16px;
+    /* pointer-events: none; */
+} 
+
+.button{
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #ff9d00;
+    text-align: center;
+    font-weight: 500;
+    color: var(--white);
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(-45deg,transparent,transparent,transparent,white,transparent,white,white,transparent,transparent);
+    
+}
+@keyframes glassy {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    }
+    
+}
+.button:hover{
+    background-color: rgb(6, 160, 6);
+
+}
+.button:hover::before{
+    animation:glassy 0.2s linear;
+    animation-delay: 0.3s;
+}
+.login-signup{
+    padding: 20px;
+}
+/* Navbar style Ends here............... */
+
+/* Footer Style Starts Here..... */
+/* footer{
+    display: grid;
+    justify-items: space-evenly;
+    align-content: start;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 40px 60px;
+    gap: 50px;
+    background-color: white;
+}
+#foot-head{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+span#foot-text{
+    font-size: 15px;
+    line-height: 35px;
+}
+span#foot-text:hover{
+    color: rgb(28, 23, 73);
+    text-decoration: underline;
+}
+#foot-pic{
+    padding: 10px;
+}
+#foot-con{
+    justify-self: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 5px 0px;
+}
+#copy{
+    border-top: 0.5px solid var(--secondary);
+    padding: 15px 10px ;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    color: white;
+    row-gap: 10px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: nowrap;
+} */
+/* Footer Style Ends Here..... */
+
+
+
+
+
+@media screen and (max-width:768px) {
+nav {
+        justify-content: start;
+        gap: 20px;
+    }
+.menu-toggle{
+    display: inline-block;
+}
+.nav-links{
+    display: none;
+}
+footer{
+    justify-items: center;
+    align-content: start;
+    grid-template-columns: 1fr 1fr ;
+    padding: 40px 60px;    
+}
+
+    
+}
+
+@media screen and (max-width:425px) {
+   
+    input[type="text"],
+input[type="email"],
+select {
+  font-size: 14px !important;
+}
+    footer{
+        justify-items: center;
+        align-content: start;
+        grid-template-columns: 1fr ;
+        padding: 20px 60px;    
+    }
+    .get-in-touch{
+        text-align: center;
+    }
+    .footer-box{
+        text-align: center;
+    }
+
+    
+}
+@media screen and (max-width:320px) {
+    
+    footer{
+        justify-items: center;
+        align-content: start;
+        grid-template-columns: 1fr ;
+        padding: 20px 60px;    
+    }
+    .get-in-touch{
+        text-align: center;
+    }
+    .footer-box{
+        text-align: center;
+    }
+    
+}
+
+.dropdown button:hover {
+    color: var(--orange);
+}
