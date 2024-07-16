@@ -276,6 +276,7 @@ img {
 
 /* nav responsive */
 @media screen and (max-width: 768px) {
+
   .contact-content {
     display: none;
   }
@@ -874,6 +875,8 @@ img {
   opacity: 1;
 }
 
+
+
 /* Responive media */
 @media screen and (max-width: 1150px) {
   .swiper-button-prev {
@@ -971,7 +974,24 @@ img {
   .footer-container {
     row-gap: 1.5rem;
   }
+  .hero{
+    flex-direction: column;
+  }
+  .hero-img{
+    display: none;
+  }
+
 }
+
+
+/* currently added */
+
+
+
+/* currently added */
+
+
+
 
 @media screen and (max-width: 600px) {
   .container {
