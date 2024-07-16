@@ -12,7 +12,7 @@
     --white:#ffffff;
     --grey:#e5e5e5;
 }
-html{
+html,body{
     scroll-behavior: smooth;
 }
 
@@ -278,7 +278,7 @@ header::before{
     width: 100%;
     height: 100%;
     background: linear-gradient(to right,rgb(1, 1, 65),transparent);
-    opacity: 70%;
+    opacity: 80%;
 }
 .header-content{
     z-index:10;
@@ -352,14 +352,14 @@ header p{
 /* Products style starts here............ */
 
 .products{
-    display: flex;
+    display: grid;
     width: 100%;
     height: auto;
-    flex-wrap: wrap;
-    padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 80px;
     padding-bottom: 50px;
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
+    align-content: center;
     gap: 20px;
 }
 .product-card{
@@ -882,7 +882,9 @@ header{
 }
 
 .products{
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
+    padding-bottom: 30px;
 }
 .product-img{
     width: 100%;
@@ -1014,7 +1016,9 @@ footer{
         padding: 10px;
     }
     .products{
-        gap: 10px;
+        padding: 30px;
+        gap: 15px;
+        padding-bottom: 30px;
     }
     .product-img{
         width: 100%;
@@ -1141,6 +1145,7 @@ footer{
     .products{
         gap: 5px;
         padding: 5px;
+        padding-bottom: 30px;
     }
     .product-img{
         width: 100%;
