@@ -51,7 +51,7 @@ document.getElementById('signin-form').addEventListener('submit', function(event
       window.location.href = 'dashboard.html';
   }
   else if (username === 'user' && password === '12345') {
-    window.location.href = 'home.html';
+    window.location.href = 'index.html';
   } 
   else {
       document.getElementById('error-message').textContent = 'Invalid username or password.';
