@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="content-box">
+        <aside id="sidebar">
+            <!-- Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <a href="#"># Hash Dashboard</a>
+                </div>
+                <!-- <hr style="color: #fff;"> -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Admin Elements
+                    </li>
+                    <li class="sidebar-item active">
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-solid fa-list pe-2"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#policies" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-regular fa-file-lines pe-2"></i>Policy</a>
+                        <ul id="policies" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Policy 1</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Policy 2</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#plan" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-sliders pe-2"></i>Plans</a>
+                        <ul id="plan" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Plan 1</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Plan 2</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Plan 3</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#agents" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-people-group pe-2"></i>Agents</a>
+                        <ul id="agents" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Insurance</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Loan</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#support" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-headset pe-2"></i>Support</a>
+                        <ul id="support" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Chat</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Voice</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>Profile</a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Login</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Register</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <hr style="color: #fff;"> -->
+                    <li class="sidebar-header">
+                        Multiple Options
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-share pe-2"></i>Others</a>
+                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
+                                    data-bs-toggle="collapse" aria-expanded="false">Other 1</a>
+                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Other 1.1</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Other 1.2</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <i class="fa-solid fa-bell fa-2xl pe-2" style="color: #949494;"></i>
+                            <i class="fa-solid fa-comment-dots fa-2xl pe-2" style="color: #949494;"></i>
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="https://avatar.iran.liara.run/public/23" alt=""
+                                    class="avatar img-fluid rounded">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a href="#" class="dropdown-item">
+                                    Profile
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Setting
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    Log out
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- main -->
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    <!-- <div class="mb-3">
+                        <h3>Dashboard</h3>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-lg-6 d-flex justify-content-center align-items-start mt-2">
+                            <div class="card flex-fill border-0 illustration1">
+                                <div class="card-body p-0 d-flex flex-fill">
+                                    <div class="row g-0 w-100">
+                                        <div class="col-6">
+                                            <div class="p-3 m-1">
+                                                <h4>Welcome, Admin</h4>
+                                                <p class="text-muted">Lorem ipsum dolor sit amet elit consectetur</p>
+                                                <button class="btn btn-primary illustration-btn">
+                                                    <a href="./Login_Signup.html" class="link-btn">
+                                                        <i class="fa-solid fa-right-from-bracket pe-2"></i>Logout
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 align-self-center text-end">
+                                            <img src="https://avatar.iran.liara.run/public/23" alt="Avatar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-center align-items-start mt-2">
+                            <div class="card flex-fill border-0 illustration2">
+                                <div class="card-body p-0 d-flex flex-fill">
+                                    <div class="row g-0 w-100">
+                                        <div class="col-6">
+                                            <div class="p-3 m-1">
+                                                <h4>Hash Insurance</h4>
+                                                <p class="text-muted">Lorem ipsum dolor sit amet elit consectetur</p>
+                                                <button class="btn btn-primary illustration-btn">
+                                                    <a href="./home.html" class="link-btn">
+                                                        <i class="fa-solid fa-house pe-2"></i>Home
+                                                    </a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 align-self-center text-end">
+                                            <img src="./images/dashboard-illustration.png" alt="Stats">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <hr> -->
+                        <!-- <div class="col-lg-4 d-flex mt-2">
+                            <div class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-grow-1 text-start">
+                                            <h4 class="mb-2">
+                                                2.8 crore+
+                                            </h4>
+                                            <p class="mb-2">
+                                                Customers Insured
+                                            </p>
+                                            <div class="mb-2">
+                                                <span class="text-success me-2">
+                                                    + 7.0%
+                                                </span>
+                                                <span class="text-muted">
+                                                    Since Last Month
+                                                </span>
+                                            </div>
+                                            <hr>
+                                            <h4 class="mb-2">
+                                                8 crore+
+                                            </h4>
+                                            <p class="mb-2">
+                                                Policies Insured
+                                            </p>
+                                            <div class="mb-0">
+                                                <span class="text-success me-2">
+                                                    Fastest Claim Settled -
+                                                </span>
+                                                <span class="text-muted">
+                                                    12 minutes
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex mt-2">
+                            <div class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <canvas id="claimSettlementChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex mt-2">
+                            <div class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <canvas id="donutChart"></canvas>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 d-flex mt-2">
+                            <div class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-grow-1 text-start">
+                                            <h4 class="mb-2">
+                                                2.8 crore+
+                                            </h4>
+                                            <p class="mb-2">
+                                                Customers Insured
+                                            </p>
+                                            <div class="mb-2">
+                                                <span class="text-success me-2">
+                                                    + 7.0%
+                                                </span>
+                                                <span class="text-muted">
+                                                    Since Last Month
+                                                </span>
+                                            </div>
+                                            <hr>
+                                            <h4 class="mb-2">
+                                                8 crore+
+                                            </h4>
+                                            <p class="mb-2">
+                                                Policies Insured
+                                            </p>
+                                            <div class="mb-0">
+                                                <span class="text-success me-2">
+                                                    Fastest Claim Settled -
+                                                </span>
+                                                <span class="text-muted">
+                                                    12 minutes
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-4 d-flex mt-2">
+                            <div class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-grow-1">
+                                            <h4 class="mb-2">
+                                                94.54%
+                                            </h4>
+                                            <p class="mb-2">
+                                                Claim settlement ratio
+                                            </p>
+                                            <div class="mb-0">
+                                                <span class="text-success me-2">
+                                                    + 7.0%
+                                                </span>
+                                                <span class="text-muted">
+                                                    Since Last Month
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="col-lg-4 d-flex mt-2">
+                            <div class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <canvas id="claimSettlementChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex mt-2">
+                            <div class="card flex-fill border-0">
+                                <div class="card-body py-4">
+                                    <canvas id="lineChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card border-0 mt-2">
+                        <div class="card-header">
+                            <h5 class="card-title">
+                                Data Table
+                            </h5>
+                            <p class="card-subtitle text-muted mt-1">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi sint
+                                deserunt saepe, sapiente ipsum.
+                            </p>
+                        </div>
+                        <div class="card-body">
+                            <!-- <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Vehicle Number</th>
+                                        <th scope="col">Year</th>
+                                        <th scope="col">Plan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Tobey Maguire</td>
+                                        <td>TN50F7953</td>
+                                        <td>2009</td>
+                                        <td>Rs. 500</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Andrew Garfield</td>
+                                        <td>TN50AL6870</td>
+                                        <td>2023</td>
+                                        <td>Rs. 500</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Tom Holland</td>
+                                        <td>TN50AL3556</td>
+                                        <td>2018</td>
+                                        <td>Rs. 500</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Andrew</td>
+                                        <td>TN50AL6870</td>
+                                        <td>2021</td>
+                                        <td>Rs. 500</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Tom</td>
+                                        <td>TN50D5635</td>
+                                        <td>2019</td>
+                                        <td>Rs. 500</td>
+                                    </tr>
+                                </tbody>
+                            </table> -->
+                            <table class="table table-striped" id="dataTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Vehicle Number</th>
+                                        <th scope="col">Year</th>
+                                        <th scope="col">Plan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dynamic content will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- <div class="d-flex justify-content-center mt-3">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div> -->
+                    <div class="d-flex justify-content-center mt-3">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <!-- Pagination buttons will be added here -->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="footer m-2">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-6 text-start">
+                            <p class="mb-0">
+                                <a href="#" class="text-muted">
+                                    <strong>Hash Insurance</strong> @ 2024
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-6 text-end">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Home</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Contact</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="text-muted">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
