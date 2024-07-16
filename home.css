@@ -12,6 +12,10 @@
     --white:#ffffff;
     --grey:#e5e5e5;
 }
+html{
+    scroll-behavior: smooth;
+}
+
 /* Side bar Style Starts */
 .menu-toggle{
     display: none;
@@ -189,6 +193,10 @@ nav .nav-item{
 .nav-item:hover{
     color: var(--secondary);
 }
+.login a{
+    text-decoration: none;
+    color: white;
+}
 .button{
     outline: none;
     border: none;
@@ -299,13 +307,15 @@ header p{
 }
 /* Header style Ends here.............. */
 
+/* Title and sub-title styles */
+
 .title{
     padding-top: 50px;
     font-size: 50px;
     text-align: center;
 }
 .sub-title{
-    padding: 5px 150px;
+    padding: 15px 150px;
     font-size: 16px;
     text-align: center;
 }
@@ -336,6 +346,8 @@ header p{
 .logo-slider{
     padding: 50px 50px;
 }
+
+/* Title and sub-title styles */
 
 /* Products style starts here............ */
 
@@ -589,64 +601,6 @@ header p{
 
 /* benefit container style Endss here..... */
 
-/* Footer Style Starts Here..... */
-footer{
-    display: grid;
-    justify-items: space-evenly;
-    align-content: start;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 40px 60px;
-    gap: 50px;
-    background-color: var(--primary);
-    color: var(--white);
-}
-#foot-head{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 40px;
-}
-span#foot-text{
-    font-size: 15px;
-    line-height: 35px;
-}
-span#foot-text:hover{
-    color: rgb(13, 160, 218);
-    text-decoration: underline;
-}
-#foot-pic{
-    padding: 10px;
-}
-#foot-con{
-    justify-self: center;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
-    padding: 5px 0px;
-}
-#copy{
-    border-top: 0.5px solid var(--secondary);
-    padding: 15px 10px ;
-    background-color: var(--primary);
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    color: white;
-    row-gap: 10px;
-}
-
-.social-icons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 15px;
-    flex-wrap: nowrap;
-}
-
-/* Footer Style Ends Here..... */
 /* Contact page style starts Here.... */
 
 .contact-section{
@@ -708,13 +662,72 @@ span#foot-text:hover{
 }
 /* Contact page style Ends Here.... */
 
+/* Footer Style Starts Here..... */
+
+footer{
+    display: grid;
+    justify-items: space-evenly;
+    align-content: start;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 40px 60px;
+    gap: 50px;
+    background-color: var(--primary);
+    color: var(--white);
+}
+#foot-head{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+}
+span#foot-text{
+    font-size: 15px;
+    line-height: 35px;
+}
+span#foot-text:hover{
+    color: rgb(13, 160, 218);
+    text-decoration: underline;
+}
+#foot-pic{
+    padding: 10px;
+}
+#foot-con{
+    justify-self: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 5px 0px;
+}
+#copy{
+    border-top: 0.5px solid var(--secondary);
+    padding: 15px 10px ;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    color: white;
+    row-gap: 10px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: nowrap;
+}
+
+/* Footer Style Ends Here..... */
 
 /* reveal animation  */
 
 .reveal{
     position: relative;
-    transform: translateY(150px);
-    opacity: 0;
+    transform: translateY(100px);
+    opacity: 0.2;
     transition: all 0.5s ease;
 }
 
@@ -841,7 +854,7 @@ header{
     font-size: 50px;
 }
 .sub-title{
-    padding: 5px 40px;
+    padding: 15px 40px;
     font-size: 15px;
 }
 .testimonial-heading{
@@ -1166,6 +1179,17 @@ footer{
     .benefit-description{
     font-size: 14px;
 }
+ .contact-form input,.contact-form textarea,
+    .contact-form button,.map-img{
+        width: 280px;
+    }
+    .map-img{
+        align-self: center;
+        justify-self: center;
+    }
+    .map-img iframe{
+        height: 280px;
+    }
 
 
 }
