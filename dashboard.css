@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 :root {
     --main-bg-color: #F8F1FF;
-    --sidebar-bg-color: linear-gradient(0deg, rgba(96, 150, 186, 1) 0%, rgba(58, 110, 165, 1) 100%);
-    --btn-color: linear-gradient(0, rgb(86, 181, 244) 0%, rgb(70, 131, 196) 100%);
+    /* --sidebar-bg-color: linear-gradient(0deg, rgba(96, 150, 186, 1) 0%, rgba(58, 110, 165, 1) 100%); */
+    /* --btn-color: linear-gradient(0, rgb(86, 181, 244) 0%, rgb(70, 131, 196) 100%); */
 }
 
 * {
@@ -47,8 +48,9 @@ h3 {
     max-width: 264px;
     min-width: 264px;
     /* background: #14213D; */
-    background: var(--sidebar-bg-color);
+    /* background: var(--sidebar-bg-color); */
     transition: all 0.35s ease-in-out;
+    background: #003566;
 }
 
 .main {
@@ -70,8 +72,9 @@ h3 {
 
 .sidebar-logo a {
     color: #e9ecef;
-    font-size: 1.15rem;
+    font-size: 1.50rem;
     font-weight: 600;
+    font-family: "Pacifico", cursive;
 }
 
 .sidebar-nav {
@@ -116,8 +119,8 @@ a.sidebar-link {
 }
 
 .sidebar-item.active a {
-    background-color: #007bff;
-    /* background-color: #002c8b; */
+    /* background-color: #007bff; */
+    background: orange;
     color: #fff;
     border-radius: 35px 0 75px 35px;
     /* -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
@@ -180,7 +183,6 @@ a.sidebar-link {
 .illustration-btn {
     border-radius: .25rem;
     text-transform: uppercase;
-    /* font-style: normal; */
     font-weight: 500;
     padding-left: 25px;
     padding-right: 25px;
@@ -191,18 +193,16 @@ a.sidebar-link {
     font-size: 0.8rem;
     line-height: 14px;
     transition: .2s .1s;
-    background: var(--btn-color);
+    /* background: var(--btn-color); */
     border: 0 solid;
     overflow: hidden;
     white-space: nowrap;
+    background: orange;
 }
 
 .illustration-btn:hover {
     cursor: pointer;
-    transition: all .3s ease-in;
-    padding-right: 30px;
-    padding-left: 30px;
-    letter-spacing: 1.2px;
+    background: rgb(255, 136, 0);
 }
 
 .link-btn {
