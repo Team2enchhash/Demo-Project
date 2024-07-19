@@ -1,10 +1,10 @@
+// Sidebar toggle
 const sidebarToggle = document.querySelector("#sidebar-toggle");
 sidebarToggle.addEventListener("click", function () {
     document.querySelector("#sidebar").classList.toggle("collapsed");
 });
 
-// ------------------------------------------------------------------------------------
-
+// Line chart
 var ctx = document.getElementById('claimSettlementChart').getContext('2d');
 var gradient = ctx.createLinearGradient(0, 0, 0, 400);
 gradient.addColorStop(0, 'rgba(60, 179, 113, 1)');   // High (red)
@@ -32,11 +32,12 @@ var claimSettlementChart = new Chart(ctx, {
         }
     }
 });
-// *************************
-var ctxLine = document.getElementById('lineChart').getContext('2d');
 
-var lineChart = new Chart(ctxLine, {
-    type: 'line',
+// Bar chart
+var ctxBar = document.getElementById('barChart').getContext('2d');
+
+var barChart = new Chart(ctxBar, {
+    type: 'bar',
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
         datasets: [{
@@ -44,17 +45,13 @@ var lineChart = new Chart(ctxLine, {
             data: [150, 225, 100, 250, 450, 325, 650],
             borderColor: 'rgba(255, 99, 132, 1)',
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderWidth: 2,
-            // fill: true,
-            tension: 0
+            borderWidth: 2
         }, {
             label: 'Policies Insured',
             data: [50, 125, 200, 150, 300, 250, 400],
             borderColor: 'rgba(75, 192, 192, 1)',
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderWidth: 2,
-            // fill: true,
-            tension: 0
+            borderWidth: 2
         }]
     },
     options: {
@@ -66,25 +63,23 @@ var lineChart = new Chart(ctxLine, {
     }
 });
 
-// ------------------------------------------------------------------------------------
-
-// 
+// Data table
 const data = [
-    { id: 1, name: "Tobey Maguire", vehicleNumber: "TN50F7953", year: 2009, plan: "Rs. 500" },
-    { id: 2, name: "Andrew Garfield", vehicleNumber: "TN50AL6870", year: 2023, plan: "Rs. 500" },
-    { id: 3, name: "Tom Holland", vehicleNumber: "TN50AL3556", year: 2018, plan: "Rs. 500" },
-    { id: 4, name: "Andrew", vehicleNumber: "TN50AL6870", year: 2021, plan: "Rs. 500" },
-    { id: 5, name: "Tom", vehicleNumber: "TN50D5635", year: 2019, plan: "Rs. 500" },
-    { id: 6, name: "John Doe", vehicleNumber: "TN60D5635", year: 2020, plan: "Rs. 600" },
-    { id: 7, name: "Jane Doe", vehicleNumber: "TN70D5635", year: 2021, plan: "Rs. 700" },
-    { id: 8, name: "Harry Potter", vehicleNumber: "TN80D5635", year: 2022, plan: "Rs. 800" },
-    { id: 9, name: "Hermione Granger", vehicleNumber: "TN90D5635", year: 2023, plan: "Rs. 900" },
-    { id: 10, name: "Ron Weasley", vehicleNumber: "TN10D5635", year: 2024, plan: "Rs. 1000" },
-    { id: 11, name: "Tony Stark", vehicleNumber: "TN11D5635", year: 2015, plan: "Rs. 1500" },
-    { id: 12, name: "Steve Rogers", vehicleNumber: "TN12D5635", year: 2016, plan: "Rs. 1600" },
-    { id: 13, name: "Natasha Romanoff", vehicleNumber: "TN13D5635", year: 2017, plan: "Rs. 1700" },
-    { id: 14, name: "Bruce Banner", vehicleNumber: "TN14D5635", year: 2018, plan: "Rs. 1800" },
-    { id: 15, name: "Clint Barton", vehicleNumber: "TN15D5635", year: 2019, plan: "Rs. 1900" }
+    { id: 1, name: "Clark Kent", vehicleNumber: "TN50F7953", year: 2009, plan: "Rs. 500" },
+    { id: 2, name: "Bruce Wayne", vehicleNumber: "TN50AL6870", year: 2023, plan: "Rs. 600" },
+    { id: 3, name: "Diana Prince", vehicleNumber: "TN49AL3556", year: 2018, plan: "Rs. 750" },
+    { id: 4, name: "Barry Allen", vehicleNumber: "TN51AL6880", year: 2021, plan: "Rs. 800" },
+    { id: 5, name: "Arthur Curry", vehicleNumber: "TN47D5635", year: 2019, plan: "Rs. 900" },
+    { id: 6, name: "Peter Parker", vehicleNumber: "TN60D5635", year: 2020, plan: "Rs. 600" },
+    { id: 7, name: "Wanda Maximoff", vehicleNumber: "TN70D5635", year: 2021, plan: "Rs. 700" },
+    { id: 8, name: "Stephen Strange", vehicleNumber: "TN80D5635", year: 2022, plan: "Rs. 800" },
+    { id: 9, name: "Carol Danvers", vehicleNumber: "TN90D5635", year: 2023, plan: "Rs. 900" },
+    { id: 10, name: "Scott Lang", vehicleNumber: "TN10D5635", year: 2024, plan: "Rs. 1000" },
+    { id: 11, name: "T'Challa", vehicleNumber: "TN11D5635", year: 2015, plan: "Rs. 1500" },
+    { id: 12, name: "Sam Wilson", vehicleNumber: "TN12D5635", year: 2016, plan: "Rs. 1600" },
+    { id: 13, name: "James Rhodes", vehicleNumber: "TN13D5635", year: 2017, plan: "Rs. 1700" },
+    { id: 14, name: "Vision", vehicleNumber: "TN14D5635", year: 2018, plan: "Rs. 1800" },
+    { id: 15, name: "Natasha Romanoff", vehicleNumber: "TN15D5635", year: 2019, plan: "Rs. 1900" }
 ];
 
 const rowsPerPage = 5;
@@ -162,17 +157,3 @@ document.addEventListener('click', (e) => {
 
 // Call the function to populate the table when the page loads
 document.addEventListener('DOMContentLoaded', () => populateTable(currentPage));
-
-
-
-//
-// document.addEventListener('DOMContentLoaded', function () {
-//     const sidebarLinks = document.querySelectorAll('.sidebar-link');
-
-//     sidebarLinks.forEach(link => {
-//         link.addEventListener('click', function () {
-//             sidebarLinks.forEach(link => link.parentElement.classList.remove('active'));
-//             this.parentElement.classList.add('active');
-//         });
-//     });
-// });
