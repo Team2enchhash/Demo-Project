@@ -785,7 +785,7 @@ span#foot-text:hover {
 
 /* REVEAL ANIMATION */
 
-.reveal {
+/* .reveal {
     position: relative;
     transform: translateY(100px);
     opacity: 0.2;
@@ -795,7 +795,7 @@ span#foot-text:hover {
 .reveal.active {
     transform: translateY(0px);
     opacity: 1;
-}
+} */
 
 /* REVEAL ANIMATION */
 
