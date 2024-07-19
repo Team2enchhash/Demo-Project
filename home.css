@@ -867,6 +867,10 @@ span#foot-text:hover {
         height: 100%;
         width: auto;
     }
+
+    .products {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 /* MEDIA QUERY FOR 768PX................................................. */
